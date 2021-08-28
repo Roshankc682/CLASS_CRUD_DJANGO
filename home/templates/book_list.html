@@ -1,0 +1,9 @@
+<a href="/books/create">Add book</a><br>
+{% for list_item in object_list %}<br>
+Title :{{list_item.title}}<br>
+Description : {{list_item.description}}<br>
+Price : Rs {{list_item.price}}<br>
+<a href="/books/{{list_item.id}}/details">Book Details</a><br>
+<a href="/books/{{list_item.id}}/delete">Delete book</a><br>
+<a href="/books/{{list_item.id}}/update">Update book</a><br><br>
+{% endfor %}
